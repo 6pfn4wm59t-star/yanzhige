@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>胭脂阁 · 古风剧本杀</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'华文楷体','KaiTi','Microsoft Yahei',serif;}
+body{background:#1a1410;color:#c8b8a8;padding:18px;}
+.container{max-width:800px;margin:0 auto;background:rgba(30,22,16,0.92);border-radius:24px;padding:28px;border:2px solid #5a3a2a;}
+h1{text-align:center;color:#d4c0a0;border-bottom:2px solid #5a3a2a;padding-bottom:16px;margin-bottom:18px;font-size:28px;letter-spacing:6px;}
+h1 small{display:block;font-size:13px;color:#9a8a7a;margin-top:6px;letter-spacing:4px;}
+h2{color:#d4b8a0;margin:18px 0 10px;border-left:4px solid #8a6a4a;padding-left:14px;font-weight:400;}
+.box{background:rgba(26,18,12,0.7);border-radius:16px;padding:16px 18px;margin:10px 0;border:1px solid #4a3a2a;}
+.box p{margin:4px 0;line-height:1.8;}
+.hide{display:none !important;}
+.btn{display:block;width:100%;padding:13px 0;margin:8px 0;border:none;border-radius:30px;background:#3a2a1a;color:#e8d8c8;font-size:16px;cursor:pointer;border:1px solid #5a4a3a;letter-spacing:2px;}
+.btn:hover:not(:disabled){background:#5a3a2a;}
+.btn:disabled{opacity:0.4;cursor:not-allowed;}
+.btn-gold{background:#6a4a2a;border-color:#8a6a3a;color:#f4e8d8;}
+.btn-sm{padding:8px 20px;width:auto;display:inline-block;margin:4px 0;}
+.red{color:#e8a090;}
+.green{color:#a0c8a0;}
+.gold{color:#d4b080;}
+.cyan{color:#80b8c8;}
+.tip{color:#b09888;font-size:13px;background:#1a120e;padding:4px 14px;border-radius:20px;display:inline-block;border:1px solid #4a3a2a;}
+.badge-group{display:flex;flex-wrap:wrap;gap:8px 12px;justify-content:center;margin:6px 0;}
+.badge{background:#2a1e16;padding:4px 14px;border-radius:20px;font-size:12px;border:1px solid #5a4a3a;color:#c0b0a0;}
+.secret-script{background:#0a0806;border-left:4px solid #8a6a4a;padding:14px 18px;margin:10px 0;border-radius:16px;border:1px solid #3a2a1a;max-height:480px;overflow-y:auto;}
+.secret-script h3{color:#d4b8a0;border-bottom:1px dashed #5a3a2a;padding-bottom:6px;margin-bottom:8px;font-weight:400;}
+.secret-script p{color:#c0b0a0;line-height:1.7;margin:3px 0;}
+.timeline-block{background:#1a120e;padding:8px 14px;border-radius:12px;margin:6px 0;font-size:13px;border-left:3px solid #6a4a3a;color:#c0b0a0;}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:600px){.role-grid{grid-template-columns:1fr;}}
+.chat-card{background:#1a120e;border-radius:14px;padding:12px 16px;margin:8px 0;border-left:4px solid #8a6a4a;}
+.chat-card .name{color:#d4b8a0;font-weight:bold;}
+.chat-card .content{color:#c0b0a0;margin-top:4px;font-size:14px;}
+.chat-card .timeline-mini{background:#0a0806;padding:6px 12px;border-radius:10px;margin-top:6px;font-size:12px;border-left:3px solid #6a4a3a;color:#b0a090;}
+.question-area{background:#0a0806;border-radius:14px;padding:14px 16px;margin-top:10px;border:1px solid #3a2a1a;}
+.question-area input,.question-area select{padding:10px 14px;border-radius:30px;border:1px solid #4a3a2a;background:#1a120e;color:#e8d8c8;font-size:14px;outline:none;}
+.question-area input::placeholder{color:#6a5a4a;}
+.flex-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.flex-row select{flex:0 0 130px;}
+.flex-row input{flex:1;min-width:120px;}
+.response-box{background:#0a0806;border-radius:12px;padding:10px 14px;margin-top:8px;border-left:3px solid #8a6a4a;color:#c0b0a0;font-size:14px;min-height:36px;}
+.footer-note{margin-top:22px;text-align:center;color:#6a5a4a;font-size:12px;border-top:1px solid #2a1a12;padding-top:14px;letter-spacing:4px;}
+.poem{font-style:italic;color:#b09888;text-align:center;padding:6px 0;border-top:1px dashed #3a2a1a;border-bottom:1px dashed #3a2a1a;margin:8px 0;}
+.warning-box{background:#2a1a12;border-left:4px solid #8a5a3a;padding:10px 14px;border-radius:12px;margin:6px 0;}
+.warning-box strong{color:#e8a090;}
+@media(max-width:500px){.container{padding:16px;}}
+</style>
+</head>
+<body>
+<div class="container" id="app">
+<h1>🏮 胭脂·阁 <small>南唐悬案 · 古风剧本杀</small></h1>
+
+<!-- STEP0 -->
+<div id="step0">
+<div class="box" style="text-align:center;">
+<div class="badge-group">
+<span class="badge">👥 2人</span>
+<span class="badge">⏳ 60-80min</span>
+<span class="badge">🎭 四角色</span>
+<span class="badge">🏮 古风</span>
+</div>
+<div class="poem">胭脂阁中香已冷，金陵月下影犹寒。</div>
+<p style="margin-top:10px;font-size:15px;">南唐·金陵。胭脂阁女掌柜<span style="color:#e8d8c8;">柳如烟</span>深夜死于阁中。<br>死因：<span class="red">毒酒 + 白绫</span><br><span class="red">她杀还是自尽？</span></p>
+<div class="warning-box"><strong>🏮 古风谜题：</strong>身份错位 · 隐藏身世 · 皇权暗斗</div>
+<p class="tip" style="margin-top:8px;">📌 角色互斥 · 禁止窥屏 · 可盘问人机</p>
+</div>
+<button class="btn" onclick="nextStep()">🏮 踏入胭脂阁</button>
+</div>
+
+<!-- STEP1 -->
+<div id="step1" class="hide">
+<h2>📜 故事背景</h2>
+<div class="box">
+<p>南唐·金陵，胭脂阁是城中最大的香粉铺，女掌柜<span style="color:#e8d8c8;">柳如烟</span>色艺双绝，与金陵名流多有往来。</p>
+<p style="margin-top:6px;">一夜，柳如烟被发现死于阁中密室——<span class="red">毒酒 + 白绫</span>，两种死法同时出现。</p>
+<p style="margin-top:10px;"><strong>四名嫌疑人：</strong></p>
+<p><strong style="color:#d4b8a0;">🌺 画师·沈墨</strong> — 柳如烟的画师兼情人</p>
+<p><strong style="color:#d4b8a0;">👘 侍女·小荷</strong> — 柳如烟的贴身侍女</p>
+<p><strong style="color:#d4b8a0;">📿 商贾·赵元</strong> — 金陵巨贾，柳如烟的仰慕者</p>
+<p><strong style="color:#d4b8a0;">🎭 乐师·苏婉</strong> — 宫中乐师，柳如烟的闺中密友</p>
+</div>
+<button class="btn" onclick="nextStep()">📖 选择角色</button>
+</div>
+
+<!-- STEP2 -->
+<div id="step2" class="hide">
+<h2>🎭 选择你的角色</h2>
+<div class="box" style="text-align:center;">
+<span style="color:#b09888;">玩家1选一个 · 玩家2选另一个</span>
+</div>
+<p class="tip">⚠️ 点击查看剧本，<span class="red">其他按钮禁用</span></p>
+<div class="role-grid">
+<button id="btnShen" class="btn" onclick="toggleShen()">🌺 画师·沈墨</button>
+<div id="shenScript" class="hide secret-script">
+<h3>🔒 画师·沈墨 · 绝密剧本</h3>
+<p><strong>人设</strong>：28岁，金陵名画师，为柳如烟画像三年。</p>
+<p><strong>秘密</strong>：你本名沈逸之，前朝太史令之子。接近柳如烟本为"前朝密录"，但已真心爱她。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时 画像，她给你一封信<br>戌时三刻 离开遇赵元争吵<br>亥时 听到阁内争执（苏婉）<br>亥时三刻 发现门反锁<br>子时 破门发现已死</div>
+<p><strong>秘密2</strong>：柳如烟信中说"若我遇不测，去城郊古寺"——你取回了她的前朝公主身份文书。</p>
+<p><strong>任务</strong>：隐藏前朝身份 · 找出真凶。</p>
+</div>
+
+<button id="btnXiao" class="btn" onclick="toggleXiao()">👘 侍女·小荷</button>
+<div id="xiaoScript" class="hide secret-script">
+<h3>🔒 侍女·小荷 · 绝密剧本</h3>
+<p><strong>人设</strong>：22岁，柳如烟的贴身侍女，情同姐妹。</p>
+<p><strong>秘密</strong>：你是柳如烟的亲妹妹，本名柳如月。姐姐以侍女身份保护你。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时 送参汤，姐姐正与沈墨说话<br>戌时六刻 听到赵元和姐姐争吵<br>亥时 引苏婉入阁后离开<br>亥时五刻 送茶发现门反锁<br>子时 惊呼叫人来破门</div>
+<p><strong>秘密2</strong>：你暗恋沈墨，但从未表露。</p>
+<p><strong>任务</strong>：隐藏亲妹妹身份 · 找出真凶。</p>
+</div>
+
+<button id="btnZhao" class="btn" onclick="toggleZhao()">📿 商贾·赵元</button>
+<div id="zhaoScript" class="hide secret-script">
+<h3>🔒 商贾·赵元 · 绝密剧本</h3>
+<p><strong>人设</strong>：45岁，金陵巨贾，柳如烟的痴心仰慕者。</p>
+<p><strong>秘密</strong>：你是南唐朝廷暗探！奉命追查"前朝密录"，柳如烟是目标。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时三刻 到访遇沈墨争吵<br>戌时六刻 与柳如烟对峙<br>亥时 愤然离去遇苏婉<br>亥时二刻 折返发现门反锁<br>子时 破门</div>
+<p><strong>秘密2</strong>：你已查实柳如烟是前朝公主，但未上报，因为已真心倾慕她。</p>
+<p><strong>任务</strong>：隐藏暗探身份 · 找出真凶。</p>
+</div>
+
+<button id="btnSu" class="btn" onclick="toggleSu()">🎭 乐师·苏婉</button>
+<div id="suScript" class="hide secret-script">
+<h3>🔒 乐师·苏婉 · 绝密剧本</h3>
+<p><strong>人设</strong>：30岁，南唐宫中乐师，柳如烟的闺中密友。</p>
+<p><strong>秘密</strong>：你是前朝宫中乐师之女，与柳如烟（前朝公主）是幼时玩伴。入南唐宫中为复仇。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时 宫中值夜后提前离宫<br>亥时 到达，与柳如烟密谈"密录"<br>亥时一刻 争吵——她反对刺杀计划<br>亥时三刻 愤然离去遇沈墨<br>子时 破门</div>
+<p><strong>秘密2</strong>：你在柳如烟酒中下了迷药，想迷昏她后取走"密录"。</p>
+<p><strong>任务</strong>：隐藏前朝身份 · 隐藏下迷药 · 找出真凶。</p>
+</div>
+</div>
+<button class="btn btn-gold" onclick="nextStep()">✅ 双方读完，进入公聊</button>
+</div>
+
+<!-- STEP3 -->
+<div id="step3" class="hide">
+<h2>🗣️ 公聊 · 盘问人机</h2>
+<div class="box">
+<p>系统已整理其他角色的公开故事。输入问题盘问人机角色！</p>
+<p class="tip">💡 问题示例："你戌时在哪里？""你和柳如烟什么关系？"</p>
+</div>
+<div id="chatArea">
+<div class="chat-card">
+<div class="name">🏮 系统</div>
+<div class="content" id="chatContent">选择角色后显示其他角色介绍...</div>
+</div>
+</div>
+<div class="question-area">
+<p style="color:#d4b8a0;font-weight:bold;margin-bottom:6px;">💬 盘问人机</p>
+<div class="flex-row">
+<select id="targetSelect"><option value="">选择对象</option></select>
+<input type="text" id="questionInput" placeholder="输入问题..." />
+<button class="btn btn-sm" onclick="askQuestion()">🔍 盘问</button>
+</div>
+<div id="responseBox" class="response-box">💬 选择对象并输入问题...</div>
+</div>
+<button class="btn" onclick="nextStep()">🔎 进入搜证</button>
+</div>
+
+<!-- STEP4 -->
+<div id="step4" class="hide">
+<h2>🔦 公开线索</h2>
+<div class="box">
+<p><strong>死因报告</strong></p>
+<p>1. 体内有 <span class="gold">少量砒霜</span> + <span class="gold">迷药</span></p>
+<p>2. 颈部有 <span class="gold">白绫勒痕</span>，但较浅</p>
+<p>3. 真正死因：<span class="red">砒霜中毒</span>，白绫是伪装</p>
+<p>4. 死亡时间：<span class="gold">亥时二刻-亥时四刻</span></p>
+<p style="margin-top:8px;"><strong>现场线索</strong></p>
+<p>5. 桃花酒中有 <span class="gold">粉末残留</span></p>
+<p>6. 柳如烟手中握有 <span class="gold">"先帝遗孤"密信</span></p>
+<p>7. 窗台有 <span class="gold">半枚脚印</span></p>
+<p>8. 画案有 <span class="gold">未完成的苏婉画像</span></p>
+<p>9. 沈墨画箱有 <span class="gold">前朝密录残页</span></p>
+<p>10. 赵元袖中有 <span class="gold">皇宫"暗卫"令牌</span></p>
+</div>
+<button class="btn" onclick="nextStep()">🧩 隐藏线索</button>
+</div>
+
+<!-- STEP5 -->
+<div id="step5" class="hide">
+<h2>⚖️ 隐藏线索</h2>
+<div class="box">
+<p><strong style="color:#e6d28c;">🔍 盘问触发</strong></p>
+<p>▪ 沈墨 — 盘问"前朝"或"太史令"</p>
+<p>▪ 小荷 — 盘问"妹妹"或"柳如月"</p>
+<p>▪ 赵元 — 盘问"暗卫"或"朝廷"</p>
+<p>▪ 苏婉 — 盘问"乐师"或"宫中"</p>
+</div>
+<div class="box">
+<p>🔄 互相提问、对时间线、找破绽。</p>
+<p class="tip">⏱️ 25分钟 · 胭脂阁中，人心难测</p>
+</div>
+<button class="btn" onclick="nextStep()">🗳️ 最终投票</button>
+</div>
+
+<!-- STEP6 -->
+<div id="step6" class="hide">
+<h2>🗳️ 最终投票</h2>
+<div class="box" style="text-align:center;">
+<p>投票选出 <span class="red">真凶</span></p>
+<p class="red" style="font-size:20px;margin:10px 0;">⚡ 毒酒？白绫？谁是真正的凶手？</p>
+<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0;">
+<span class="badge">🌺 沈墨</span>
+<span class="badge">👘 小荷</span>
+<span class="badge">📿 赵元</span>
+<span class="badge">🎭 苏婉</span>
+</div>
+</div>
+<button class="btn btn-gold" onclick="nextStep()">📖 公布真相</button>
+</div>
+
+<!-- STEP7 -->
+<div id="step7" class="hide">
+<h2>⚡ 真相复盘</h2>
+<div class="box" style="border-left:4px solid #8a5a3a;">
+<p><span class="green" style="font-size:20px;">🔴 真相反转</span></p>
+<p style="margin-top:8px;"><strong>🏮 真凶：乐师·苏婉</strong></p>
+<p>苏婉在桃花酒中下迷药想取"密录"，争吵后柳如烟说"复国无望，我已放弃"。苏婉失望中将砒霜倒入酒中灌入柳如烟口中，后用白绫伪造自尽假象。她翻窗离开时留下半枚脚印。</p>
+<p style="margin-top:8px;"><strong>🔄 真正的反转</strong></p>
+<p>柳如烟早已猜到苏婉会来。她写了信给苏婉："妹妹，我从未怪你。复国无望，姐姐只愿你平安。"</p>
+<p>那封信掉在桌底——直到真相揭晓苏婉才看到，哭道："姐姐，我终究辜负了你。"</p>
+</div>
+<div class="box">
+<p><strong>📌 结局</strong></p>
+<p>▪ <strong>沈墨</strong> · 隐姓埋名，终身未娶</p>
+<p>▪ <strong>小荷</strong> · 继承胭脂阁，每月十五在姐姐牌位前放一壶桃花酒</p>
+<p>▪ <strong>赵元</strong> · 辞去暗卫，在胭脂阁对面开绸缎庄，日日望着阁楼</p>
+<p>▪ <strong>苏婉</strong> · 伏法。行刑前夜写诗："胭脂阁中月，照我十年心。"</p>
+</div>
+<button class="btn" onclick="restartGame()">🔄 重入胭脂阁</button>
+</div>
+
+<div class="footer-note">🏮 胭脂散尽，唯有月色如初</div>
+</div>
+
+<script>
+var currentStep=0, selectedRole=null;
+var stepIds=["step0","step1","step2","step3","step4","step5","step6","step7"];
+
+function nextStep(){
+    if(currentStep<stepIds.length-1){
+        document.getElementById(stepIds[currentStep]).classList.add('hide');
+        currentStep++;
+        document.getElementById(stepIds[currentStep]).classList.remove('hide');
+        if(stepIds[currentStep]=='step2') resetButtons();
+        if(stepIds[currentStep]=='step3' && selectedRole) generateChat(selectedRole);
+    }
+}
+
+function restartGame(){
+    currentStep=0; selectedRole=null;
+    for(var i=0;i<stepIds.length;i++){document.getElementById(stepIds[i]).classList.add('hide');}
+    document.getElementById('step0').classList.remove('hide');
+    resetButtons();
+}
+
+var btnShen=document.getElementById('btnShen');
+var btnXiao=document.getElementById('btnXiao');
+var btnZhao=document.getElementById('btnZhao');
+var btnSu=document.getElementById('btnSu');
+var allButtons=[btnShen,btnXiao,btnZhao,btnSu];
+
+var shenScript=document.getElementById('shenScript');
+var xiaoScript=document.getElementById('xiaoScript');
+var zhaoScript=document.getElementById('zhaoScript');
+var suScript=document.getElementById('suScript');
+var allScripts=[shenScript,xiaoScript,zhaoScript,suScript];
+
+function resetButtons(){
+    for(var i=0;i<allButtons.length;i++){allButtons[i].disabled=false;}
+    for(var j=0;j<allScripts.length;j++){allScripts[j].classList.add('hide');}
+    selectedRole=null;
+}
+
+function disableOthers(except){
+    for(var i=0;i<allButtons.length;i++){if(allButtons[i]!=except)allButtons[i].disabled=true;}
+}
+
+function toggleScript(script,btn,key){
+    if(!script.classList.contains('hide')){
+        script.classList.add('hide');
+        resetButtons();
+        return;
+    }
+    for(var i=0;i<allScripts.length;i++){allScripts[i].classList.add('hide');}
+    script.classList.remove('hide');
+    disableOthers(btn);
+    btn.disabled=false;
+    selectedRole=key;
+}
+
+function toggleShen(){toggleScript(shenScript,btnShen,'shen');}
+function toggleXiao(){toggleScript(xiaoScript,btnXiao,'xiao');}
+function toggleZhao(){toggleScript(zhaoScript,btnZhao,'zhao');}
+function toggleSu(){toggleScript(suScript,btnSu,'su');}
+
+var roleNames={shen:'画师·沈墨',xiao:'侍女·小荷',zhao:'商贾·赵元',su:'乐师·苏婉'};
+
+var chatData={
+shen:{name:'🌺 画师·沈墨',story:'金陵名画师，为柳如烟画像三年。出身前朝没落望族。',timeline:'戌时画像→戌时三刻遇赵元→亥时闻争执→亥时三刻门反锁→子时破门'},
+xiao:{name:'👘 侍女·小荷',story:'柳如烟贴身侍女，从小在胭脂阁长大，情同姐妹。',timeline:'戌时送参汤→戌时六刻闻争吵→亥时引苏婉入阁→亥时五刻发现反锁→子时惊呼'},
+zhao:{name:'📿 商贾·赵元',story:'金陵巨贾，柳如烟痴心仰慕者，常送名贵胭脂水粉。',timeline:'戌时三刻到访遇沈墨→戌时六刻对峙→亥时遇苏婉→亥时二刻折返→子时破门'},
+su:{name:'🎭 乐师·苏婉',story:'南唐宫中乐师，柳如烟闺中密友，常到胭脂阁抚琴论诗。',timeline:'戌时离宫→亥时到达密谈→亥时一刻争吵→亥时三刻离遇沈墨→子时破门'}
+};
+
+var kb={
+shen:{'前朝':'我是前朝太史令之子。柳如烟是前朝公主。','太史令':'我父亲是前朝太史令，被南唐所杀。','default':'这件事我暂时不能说。'},
+xiao:{'妹妹':'柳如烟是我亲姐姐，我叫柳如月。她一直保护我。','default':'我只是个侍女，什么都不知道。'},
+zhao:{'暗卫':'我是南唐朝廷暗探，奉命追查"前朝密录"。','朝廷':'皇帝怀疑前朝余孽藏于金陵，命我暗中查探。','default':'我只是个商人，你们想多了。'},
+su:{'乐师':'我在宫中为乐师，但我恨这个朝廷。','宫中':'我入宫是为了寻找复仇的机会。','default':'我真的没有杀她…'}
+};
+
+function generateChat(key){
+    var html='', keys=Object.keys(chatData), has=false;
+    for(var i=0;i<keys.length;i++){
+        if(keys[i]!=key){
+            has=true; var d=chatData[keys[i]];
+            html+='<div class="chat-card"><div class="name">'+d.name+'</div><div class="content">'+d.story+'</div><div class="timeline-mini"><strong>时间线：</strong>'+d.timeline+'</div></div>';
+        }
+    }
+    document.getElementById('chatContent').innerHTML=has?html:'<p style="color:#6a8a6a;">无其他角色</p>';
+    var sel=document.getElementById('targetSelect');
+    sel.innerHTML='<option value="">选择对象</option>';
+    for(var j=0;j<keys.length;j++){
+        if(keys[j]!=key){
+            var opt=document.createElement('option');
+            opt.value=keys[j]; opt.textContent=roleNames[keys[j]];
+            sel.appendChild(opt);
+        }
+    }
+}
+
+function askQuestion(){
+    var target=document.getElementById('targetSelect').value;
+    var q=document.getElementById('questionInput').value.trim();
+    var box=document.getElementById('responseBox');
+    if(!target){box.innerHTML='⚠️ 请选择对象！';return;}
+    if(!q){box.innerHTML='⚠️ 请输入问题！';return;}
+    var data=kb[target];
+    var ans=data['default']||'我不太清楚…';
+    for(var key in data){ if(q.indexOf(key)!=-1){ ans=data[key]; break; } }
+    box.innerHTML='💬 <strong style="color:#d4b8a0;">'+roleNames[target]+'</strong> 回答：'+ans;
+}
+
+resetButtons();
+</script>
+</body>
+</html>
