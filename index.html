@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>胭脂阁 · 完整加长版</title>
+<title>胭脂阁 · 完整版</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Microsoft Yahei',sans-serif;}
 body{background:#0a080e;color:#c8c0d0;padding:12px;}
@@ -64,15 +64,15 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 </head>
 <body>
 <div class="container" id="app">
-<h1>🏮 胭脂·阁 <small>完整加长版</small></h1>
+<h1>🏮 胭脂·阁</h1>
 <div class="progress-bar"><div class="fill" id="progress"></div></div>
 
 <div id="s0">
 <div class="box" style="text-align:center;">
 <div class="badge-group"><span class="badge">2人</span><span class="badge">120-150分钟</span></div>
 <div class="poem">胭脂阁中香已冷，金陵月下影犹寒。</div>
-<p style="font-size:12px;">南唐·金陵。胭脂阁女掌柜柳如烟死于阁中。<br>死因：<span class="red">毒酒 + 白绫</span>。<br>她杀还是自尽？胭脂阁中，人心比毒药更难测。</p>
-<p class="tip">角色互斥 · 禁止窥屏 · 古风情感</p>
+<p style="font-size:12px;">南唐·金陵。胭脂阁女掌柜柳如烟死于阁中。<br>死因：<span class="red">毒酒 + 白绫</span>。<br>她杀还是自尽？</p>
+<p class="tip">角色互斥 · 禁止窥屏</p>
 </div>
 <button class="btn" onclick="go(1)">踏入胭脂阁</button>
 </div>
@@ -80,10 +80,10 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div id="s1" class="hide">
 <h2>故事背景</h2>
 <div class="box">
-<p>🌺 画师·沈墨 — 柳如烟的画师兼情人，出身没落望族</p>
-<p>👘 侍女·小荷 — 柳如烟的贴身侍女，从小相伴长大</p>
-<p>📿 商贾·赵元 — 金陵巨贾，柳如烟的痴心仰慕者</p>
-<p>🎭 乐师·苏婉 — 宫中乐师，柳如烟的闺中密友</p>
+<p>沈墨 — 柳如烟的画师兼情人</p>
+<p>小荷 — 柳如烟的贴身侍女</p>
+<p>赵元 — 金陵巨贾，柳如烟的仰慕者</p>
+<p>苏婉 — 宫中乐师，柳如烟的闺中密友</p>
 <p style="margin-top:4px;font-size:11px;color:#6a5a6a;">胭脂阁中，每个人都爱着她。但爱的方式，各不相同。</p>
 </div>
 <button class="btn" onclick="go(2)">选择角色</button>
@@ -93,47 +93,47 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <h2>选择角色</h2>
 <div class="box" style="text-align:center;font-size:11px;color:#8a7a9a;">玩家1选一个 · 玩家2选另一个</div>
 <div class="role-grid">
-<button id="bShen" class="btn" onclick="pick('Shen')">🌺 画师·沈墨</button>
+<button id="bShen" class="btn" onclick="pick('Shen')">沈墨</button>
 <div id="sShen" class="hide secret-script">
-<h3>画师·沈墨 · 绝密剧本</h3>
-<p><strong>人设</strong>：28岁，金陵名画师，为柳如烟画像三年。</p>
-<p><strong>秘密</strong>：你本名沈逸之，前朝太史令之子。你接近柳如烟是为了"前朝密录"，但三年相处，你已真心爱她。柳如烟给了你一封信："若我遇不测，去城郊古寺取我存物。"你取回了——那是一封前朝公主的身份文书，柳如烟竟是前朝公主！</p>
-<div class="timeline-block"><strong>时间线</strong><br>戌时 画像，她神色异常给了你一封信<br>戌时三刻 离开遇赵元争吵<br>亥时 听到阁内传来争执声（苏婉）<br>亥时三刻 再次前往，门反锁敲窗无人应<br>子时 小荷惊呼，破门</div>
-<p><strong>任务</strong>：隐藏前朝身份 · 隐藏柳如烟是公主 · 找出真凶</p>
+<h3>沈墨 · 绝密剧本</h3>
+<p><strong>人设</strong>：28岁，金陵名画师。</p>
+<p><strong>秘密</strong>：你本名沈逸之，前朝太史令之子。你接近柳如烟是为了"前朝密录"，但三年相处，你已真心爱她。柳如烟给了你一封信："若我遇不测，去城郊古寺取我存物。"你取回了——那是前朝公主的身份文书。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时 画像，她给你一封信<br>戌时三刻 离开遇赵元争吵<br>亥时 听到阁内争执（苏婉）<br>亥时三刻 门反锁<br>子时 破门</div>
+<p><strong>任务</strong>：隐藏前朝身份 · 找出真凶</p>
 </div>
 
-<button id="bXiao" class="btn" onclick="pick('Xiao')">👘 侍女·小荷</button>
+<button id="bXiao" class="btn" onclick="pick('Xiao')">小荷</button>
 <div id="sXiao" class="hide secret-script">
-<h3>侍女·小荷 · 绝密剧本</h3>
-<p><strong>人设</strong>：22岁，柳如烟的贴身侍女，从小在胭脂阁长大。</p>
-<p><strong>秘密</strong>：你是柳如烟亲妹妹，本名柳如月。十年前家道中落，姐姐将你带在身边以侍女身份保护你。你早已知道姐姐是前朝公主。你偷偷爱慕沈墨，但你知道姐姐和他两情相悦，你从未表露。</p>
-<div class="timeline-block"><strong>时间线</strong><br>戌时 送参汤，姐姐正与沈墨说话<br>戌时六刻 听到赵元和姐姐争吵，提到"密录"<br>亥时 苏婉来访，引她入阁后离开<br>亥时五刻 送茶发现门反锁<br>子时 惊叫众人，破门</div>
-<p><strong>任务</strong>：隐藏亲妹妹身份 · 保护姐姐的秘密 · 找出真凶</p>
+<h3>小荷 · 绝密剧本</h3>
+<p><strong>人设</strong>：22岁，贴身侍女。</p>
+<p><strong>秘密</strong>：你是柳如烟亲妹妹，本名柳如月。姐姐以侍女身份保护你。你已知道姐姐是前朝公主。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时 送参汤<br>戌时六刻 听到赵元和姐姐争吵<br>亥时 引苏婉入阁后离开<br>亥时五刻 发现门反锁<br>子时 惊呼破门</div>
+<p><strong>任务</strong>：隐藏亲妹妹身份 · 找出真凶</p>
 </div>
 
-<button id="bZhao" class="btn" onclick="pick('Zhao')">📿 商贾·赵元</button>
+<button id="bZhao" class="btn" onclick="pick('Zhao')">赵元</button>
 <div id="sZhao" class="hide secret-script">
-<h3>商贾·赵元 · 绝密剧本</h3>
-<p><strong>人设</strong>：45岁，金陵巨贾，柳如烟的痴心仰慕者。</p>
-<p><strong>秘密</strong>：你并非普通商贾——你是南唐朝廷暗探！皇帝怀疑前朝余孽藏于金陵，命你追查"前朝密录"。你接近柳如烟是为了查探她是否与前朝有关。但你已经查实——柳如烟就是前朝公主。你没有上报，因为你已真心倾慕她。</p>
-<div class="timeline-block"><strong>时间线</strong><br>戌时三刻 到访遇沈墨争吵<br>戌时六刻 与柳如烟对峙，质问密录<br>亥时 愤然离去遇苏婉<br>亥时二刻 折返发现门反锁<br>子时 破门</div>
-<p><strong>任务</strong>：隐藏暗探身份 · 隐藏柳如烟是公主 · 找出真凶</p>
+<h3>赵元 · 绝密剧本</h3>
+<p><strong>人设</strong>：45岁，金陵巨贾。</p>
+<p><strong>秘密</strong>：你是南唐朝廷暗探！你已查实柳如烟是前朝公主，但没有上报，因为你已真心倾慕她。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时三刻 到访遇沈墨争吵<br>戌时六刻 与柳如烟对峙<br>亥时 愤然离去遇苏婉<br>亥时二刻 折返发现门反锁<br>子时 破门</div>
+<p><strong>任务</strong>：隐藏暗探身份 · 找出真凶</p>
 </div>
 
-<button id="bSu" class="btn" onclick="pick('Su')">🎭 乐师·苏婉</button>
+<button id="bSu" class="btn" onclick="pick('Su')">苏婉</button>
 <div id="sSu" class="hide secret-script">
-<h3>乐师·苏婉 · 绝密剧本</h3>
-<p><strong>人设</strong>：30岁，南唐宫中乐师，柳如烟的闺中密友。</p>
-<p><strong>秘密</strong>：你是前朝宫中乐师之女，与柳如烟（前朝公主）是幼时玩伴。你入南唐宫中是为了复仇——你一直在找机会刺杀皇帝。但柳如烟不同意你的计划。你已在柳如烟酒中下了迷药——只是想迷昏她后强行取走"密录"，迷药不致死。</p>
-<div class="timeline-block"><strong>时间线</strong><br>戌时 宫中值夜后提前离宫<br>亥时 到达，与柳如烟密谈"密录"<br>亥时一刻 争吵，她反对刺杀计划<br>亥时三刻 愤然离去遇沈墨<br>子时 听到惊呼破门</div>
-<p><strong>任务</strong>：隐藏前朝身份 · 隐藏下迷药的事 · 找出真凶</p>
+<h3>苏婉 · 绝密剧本</h3>
+<p><strong>人设</strong>：30岁，宫中乐师。</p>
+<p><strong>秘密</strong>：你是前朝乐师之女，与柳如烟是幼时玩伴。你入南唐宫中是为了复仇。你已在柳如烟酒中下了迷药——只是想迷昏她取走"密录"。</p>
+<div class="timeline-block"><strong>时间线</strong><br>戌时 离宫<br>亥时 到达密谈<br>亥时一刻 争吵<br>亥时三刻 愤然离去<br>子时 破门</div>
+<p><strong>任务</strong>：隐藏前朝身份 · 隐藏下迷药 · 找出真凶</p>
 </div>
 </div>
 <button class="btn btn-gold" onclick="go(3)">进入公聊</button>
 </div>
 
 <div id="s3" class="hide">
-<h2>第一阶段 · 公聊分享</h2>
+<h2>公聊 · 分享与盘问</h2>
 <div class="box" style="border-left:4px solid #5a3a5a;">
 <p style="color:#a080a0;font-weight:bold;font-size:11px;">他们说过的话</p>
 <div id="shareArea" style="font-size:11px;color:#8a7a8a;">选择角色后显示...</div>
@@ -150,16 +150,16 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <button class="btn btn-sm" onclick="ask()">询问</button>
 </div>
 <div class="quick-btns">
-<button onclick="qk('沈墨')">画师</button>
-<button onclick="qk('小荷')">侍女</button>
-<button onclick="qk('赵元')">商贾</button>
-<button onclick="qk('苏婉')">乐师</button>
+<button onclick="qk('沈墨')">沈墨</button>
+<button onclick="qk('小荷')">小荷</button>
+<button onclick="qk('赵元')">赵元</button>
+<button onclick="qk('苏婉')">苏婉</button>
 <button onclick="qk('前朝')">前朝</button>
 </div>
 <div id="resp" class="response-box">选择对象并输入问题...</div>
 </div>
 </div>
-<button class="btn" onclick="go(4)">进入第一轮搜证</button>
+<button class="btn" onclick="go(4)">搜证</button>
 </div>
 
 <div id="s4" class="hide">
@@ -167,50 +167,37 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div class="box">
 <p><strong>死因报告</strong></p>
 <p>1. 体内检测出少量砒霜 + 迷药</p>
-<p>2. 颈部有白绫勒痕，但较浅</p>
-<p>3. 真正死因：<span class="gold">砒霜中毒</span>，白绫是死后伪装</p>
+<p>2. 颈部有白绫勒痕但较浅</p>
+<p>3. 真正死因：<span class="gold">砒霜中毒</span></p>
 <p>4. 死亡时间：<span class="gold">亥时二刻-亥时四刻</span></p>
 <p style="margin-top:4px;"><strong>现场线索</strong></p>
-<p>5. 桌上有一壶桃花酒，杯中有粉末残留</p>
-<p>6. 柳如烟手中握着一封密信，写有"先帝遗孤"</p>
+<p>5. 桃花酒杯中有粉末残留</p>
+<p>6. 柳如烟手中握有"先帝遗孤"密信</p>
 <p>7. 窗台有半枚脚印</p>
-<p>8. 画案上有未完成的画像，酷似苏婉</p>
-<p>9. 沈墨画箱中有前朝密录残页</p>
-<p>10. 赵元袖中暗藏皇宫令牌，刻有"暗卫"</p>
+<p>8. 画案上有未完成画像</p>
 </div>
-<button class="btn" onclick="go(5)">进入第二轮搜证</button>
+<button class="btn" onclick="go(5)">第二轮搜证</button>
 </div>
 
 <div id="s5" class="hide">
 <h2>第二轮搜证 · 隐藏线索</h2>
 <div class="box">
-<p><strong style="color:#e8a0c8;">需要盘问触发的线索</strong></p>
-<p>1. 盘问沈墨「前朝」或「太史令」——说出前朝身份和密录</p>
-<p>2. 盘问小荷「妹妹」或「柳如月」——说出亲妹妹身份</p>
-<p>3. 盘问赵元「暗卫」或「朝廷」——说出暗探身份</p>
-<p>4. 盘问苏婉「乐师」或「宫中」——说出前朝乐师之女身份</p>
-<p>5. 盘问所有人「桃花酒」——谁在酒里下了东西</p>
+<p><strong style="color:#e8a0c8;">需要盘问触发</strong></p>
+<p>1. 盘问沈墨「前朝」或「太史令」</p>
+<p>2. 盘问小荷「妹妹」或「柳如月」</p>
+<p>3. 盘问赵元「暗卫」或「朝廷」</p>
+<p>4. 盘问苏婉「乐师」或「宫中」</p>
 </div>
-<div class="box">
-<p><strong style="color:#d4b080;">时间线矛盾</strong></p>
-<p>苏婉说她在亥时三刻离开了。但沈墨说他在亥时三刻看到阁内有烛火晃动。</p>
-<p>赵元说他在亥时二刻看到门反锁了。但小荷说她在亥时五刻才发现门反锁。</p>
-<p>谁在说谎？</p>
-</div>
-<button class="btn" onclick="go(6)">进入动机分析</button>
+<button class="btn" onclick="go(6)">动机分析</button>
 </div>
 
 <div id="s6" class="hide">
-<h2>动机分析 · 爱的方式</h2>
+<h2>动机分析</h2>
 <div class="box">
-<p><strong style="color:#e8a0c8;">沈墨</strong> — 他爱她，但他带着任务而来。他是真心还是假意？</p>
-<p><strong style="color:#e8a0c8;">小荷</strong> — 她爱姐姐，也爱沈墨。她的沉默是保护还是背叛？</p>
-<p><strong style="color:#e8a0c8;">赵元</strong> — 他倾慕她，但他也是朝廷的暗探。他的爱能战胜忠诚吗？</p>
-<p><strong style="color:#e8a0c8;">苏婉</strong> — 她爱她如姐妹，但她更爱复仇。她的偏执会毁掉一切吗？</p>
-</div>
-<div class="box">
-<p style="font-size:11px;color:#8a7a9a;">提示：柳如烟手中那封"先帝遗孤"的密信，是写给谁的？</p>
-<p style="font-size:11px;color:#8a7a9a;">那封信，可能是她的遗书。</p>
+<p><strong style="color:#e8a0c8;">沈墨</strong> — 他爱她，但他带着任务而来</p>
+<p><strong style="color:#e8a0c8;">小荷</strong> — 她爱姐姐，也爱沈墨</p>
+<p><strong style="color:#e8a0c8;">赵元</strong> — 他倾慕她，但他也是暗探</p>
+<p><strong style="color:#e8a0c8;">苏婉</strong> — 她爱她如姐妹，但她更爱复仇</p>
 </div>
 <button class="btn" onclick="go(7)">第二轮盘问</button>
 </div>
@@ -232,8 +219,6 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <button onclick="qk2('你是谁')">你是谁</button>
 <button onclick="qk2('密录')">密录</button>
 <button onclick="qk2('桃花酒')">桃花酒</button>
-<button onclick="qk2('先帝遗孤')">先帝遗孤</button>
-<button onclick="qk2('真心')">真心</button>
 </div>
 <div id="resp2" class="response-box">选择对象并输入问题...</div>
 </div>
@@ -246,14 +231,14 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <div class="box" style="text-align:center;"><p>谁杀了柳如烟？</p></div>
 <div class="vote-status" id="vs"><span class="voter">玩家1</span> 未投 | <span class="voter">玩家2</span> 未投</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;">
-<button class="btn btn-vote" id="v1A" onclick="vt(1,'A')">画师·沈墨</button>
-<button class="btn btn-vote" id="v2A" onclick="vt(2,'A')">画师·沈墨</button>
-<button class="btn btn-vote" id="v1B" onclick="vt(1,'B')">侍女·小荷</button>
-<button class="btn btn-vote" id="v2B" onclick="vt(2,'B')">侍女·小荷</button>
-<button class="btn btn-vote" id="v1C" onclick="vt(1,'C')">商贾·赵元</button>
-<button class="btn btn-vote" id="v2C" onclick="vt(2,'C')">商贾·赵元</button>
-<button class="btn btn-vote" id="v1D" onclick="vt(1,'D')">乐师·苏婉</button>
-<button class="btn btn-vote" id="v2D" onclick="vt(2,'D')">乐师·苏婉</button>
+<button class="btn btn-vote" id="v1A" onclick="vt(1,'A')">沈墨</button>
+<button class="btn btn-vote" id="v2A" onclick="vt(2,'A')">沈墨</button>
+<button class="btn btn-vote" id="v1B" onclick="vt(1,'B')">小荷</button>
+<button class="btn btn-vote" id="v2B" onclick="vt(2,'B')">小荷</button>
+<button class="btn btn-vote" id="v1C" onclick="vt(1,'C')">赵元</button>
+<button class="btn btn-vote" id="v2C" onclick="vt(2,'C')">赵元</button>
+<button class="btn btn-vote" id="v1D" onclick="vt(1,'D')">苏婉</button>
+<button class="btn btn-vote" id="v2D" onclick="vt(2,'D')">苏婉</button>
 </div>
 <div id="vr" style="display:none;text-align:center;padding:4px;background:#0a0a12;border-radius:8px;margin:3px 0;font-size:12px;"><span id="vtxt"></span></div>
 <button class="btn btn-gold" id="rb" onclick="showTruth()" style="display:none;">揭晓真相</button>
@@ -263,18 +248,17 @@ h2{color:#d4a0c8;margin:8px 0 4px;border-left:4px solid #8a4a7a;padding-left:10p
 <h2>真相</h2>
 <div class="box" style="border-left:4px solid #8a4a7a;">
 <p><span class="green" style="font-size:16px;">真相反转</span></p>
-<p><strong>真凶：乐师·苏婉</strong></p>
-<p>苏婉在桃花酒中下了迷药，想取"密录"。争吵中柳如烟说"复国无望，我已放弃"。苏婉在极度失望中将砒霜倒入酒中灌入柳如烟口中，后用白绫伪造自尽假象。</p>
-<p style="margin-top:4px;"><span class="gold">真正的反转：</span></p>
-<p>柳如烟早已知道苏婉会来。她提前写了两封信：一封给沈墨交代"密录"藏处；一封给苏婉——</p>
+<p><strong>真凶：苏婉</strong></p>
+<p>苏婉在桃花酒中下了迷药，想取"密录"。争吵中柳如烟说"复国无望，我已放弃"。苏婉在失望中将砒霜倒入酒中，后用白绫伪造自尽。</p>
+<p>柳如烟早已知道苏婉会来。她写了一封信给苏婉：</p>
 <p style="font-style:italic;color:#b8a8c0;">"妹妹，我从未怪你。复国无望，姐姐只愿你平安。"</p>
-<p>那封信掉在桌底。苏婉直到真相揭晓才看到，她哭着说："姐姐，我终究辜负了你。"</p>
+<p>那封信掉在桌底。苏婉直到真相揭晓才看到。</p>
 </div>
 <div class="box">
 <p><strong>结局</strong></p>
 <p>沈墨 · 隐姓埋名，终身未娶</p>
-<p>小荷 · 继承胭脂阁，每月十五在姐姐牌位前放一壶桃花酒</p>
-<p>赵元 · 辞去暗卫，在胭脂阁对面开绸缎庄</p>
+<p>小荷 · 继承胭脂阁</p>
+<p>赵元 · 辞去暗卫</p>
 <p>苏婉 · 伏法。行刑前夜写诗："胭脂阁中月，照我十年心。"</p>
 </div>
 <button class="btn" onclick="restart()">重新开始</button>
@@ -290,36 +274,35 @@ var votes=[null,null];
 var labels={A:'沈墨',B:'小荷',C:'赵元',D:'苏婉'};
 
 var shareStories={
-Shen:'我为她画了三年的像。但最后一幅，我画的是她的背影。因为我不敢看她的眼睛。',
-Xiao:'姐姐把一切都给了我——名字、身份、活下去的机会。但我连一句"我爱你"都不敢说。',
-Zhao:'我是朝廷的暗探，但我爱上了一个前朝公主。我每天醒来都在想：我是谁？',
-Su:'我进宫十年，弹了十年的琴。每一首曲子，都是为了杀一个人而练的。'
+Shen:'我为她画了三年的像。但最后一幅，我画的是她的背影。',
+Xiao:'姐姐把一切都给了我——名字、身份、活下去的机会。',
+Zhao:'我是朝廷的暗探，但我爱上了一个前朝公主。',
+Su:'我用了十年时间学会弹琴，然后用了一刻钟学会了杀人。'
 };
 var shareLines={
-Shen:'他的画笔在最后一幅画上停了一下——停在了她的眼睛上。',
-Xiao:'她梳头时掉了一根簪子——那是姐姐送她的最后一件东西。',
-Zhao:'他袖中的令牌上刻着"暗卫"两个字，已经被磨得看不清了。',
-Su:'她的琴弦断了一根，但她没有换。她说："断了的声音，更像我。"'
+Shen:'他的画笔在最后一幅画上停了一下。',
+Xiao:'她梳头时掉了一根簪子——那是姐姐送她的。',
+Zhao:'他袖中的令牌已经被磨得看不清了。',
+Su:'她的琴弦断了一根，但她没有换。'
 };
 var chatData={
 Shen:{n:'沈墨',s:'画师，前朝太史令之子。',t:'戌时画像→戌时三刻遇赵元→亥时闻争执→亥时三刻门反锁→子时破门'},
 Xiao:{n:'小荷',s:'侍女，柳如烟亲妹妹。',t:'戌时送参汤→戌时六刻闻争吵→亥时引苏婉入阁→亥时五刻发现反锁→子时惊呼'},
 Zhao:{n:'赵元',s:'商贾，朝廷暗探。',t:'戌时三刻到访→戌时六刻对峙→亥时遇苏婉→亥时二刻折返→子时破门'},
-Su:{n:'苏婉',s:'乐师，前朝乐师之女。',t:'戌时离宫→亥时到达密谈→亥时一刻争吵→亥时三刻离遇沈墨→子时破门'}
+Su:{n:'苏婉',s:'乐师，前朝乐师之女。',t:'戌时离宫→亥时到达密谈→亥时一刻争吵→亥时三刻离→子时破门'}
 };
 var kb={
-Shen:{'前朝':'我是前朝太史令之子。柳如烟是前朝公主。','太史令':'我父亲是前朝太史令，被南唐所杀。','密录':'柳如烟让我保管密录…那是前朝复国的名单。','桃花酒':'桃花酒…我见她喝过很多次，但从没见她在酒里加过东西。','default':'我画了她三年，但我从来没看清过她。'},
-Xiao:{'妹妹':'柳如烟是我亲姐姐，我叫柳如月。','密录':'姐姐说密录是前朝最后的希望。但她又说，希望会害死人。','桃花酒':'桃花酒是姐姐自己酿的…她说那是她母亲教她的。','default':'我恨我自己什么都没做。'},
-Zhao:{'暗卫':'我是南唐朝廷暗探。','密录':'皇帝要前朝密录，但我藏起来了。','柳如烟':'她是前朝公主。但我知道的时候，已经来不及了。','桃花酒':'我查过那壶酒——里面有两种东西。','default':'我做了一辈子的暗探，唯一没查清的是自己的心。'},
-Su:{'乐师':'我入宫当了十年乐师。','前朝':'我是前朝乐师之女。柳如烟是我幼时的玩伴。','密录':'密录里有一份名单——上面有我的名字。','桃花酒':'我在酒里下了迷药…我只是想让她睡一觉。','default':'我用了十年学琴，用了一刻钟杀人。'}
+Shen:{'前朝':'我是前朝太史令之子。柳如烟是前朝公主。','密录':'柳如烟让我保管密录。','桃花酒':'桃花酒…我从没见她在酒里加过东西。','default':'我画了她三年，但我从来没看清过她。'},
+Xiao:{'妹妹':'柳如烟是我亲姐姐，我叫柳如月。','密录':'姐姐说密录是前朝最后的希望。','桃花酒':'桃花酒是姐姐自己酿的。','default':'我恨我自己什么都没做。'},
+Zhao:{'暗卫':'我是南唐朝廷暗探。','密录':'皇帝要前朝密录，但我藏起来了。','柳如烟':'她是前朝公主。但我知道的时候已经来不及了。','default':'我做了一辈子的暗探。'},
+Su:{'乐师':'我入宫当了十年乐师。','前朝':'我是前朝乐师之女。','密录':'密录里有我的名字。','桃花酒':'我在酒里下了迷药。','default':'我用了十年学琴，用了一刻钟杀人。'}
 };
-    var kb2={
-Shen:{'你是谁':'我是沈逸之。那个名字在书里死了，在梦里活着。','密录':'密录是一份名单，上面有所有还活着的前朝旧臣的名字。柳如烟把它交给了我，因为她说"你比我自己更可靠"。','桃花酒':'那壶酒是她自己酿的。她说那是她母亲教她的方子。她喝那杯酒的时候，从来不会加东西。','先帝遗孤':'她就是先帝遗孤。她活着的每一天，都在躲。','真心':'我画她的时候，心里是干净的。我从来没骗过她。','default':'我画了她三年，最后一张画，是她的背影。'},
-Xiao:{'你是谁':'我是柳如月。姐姐给了我她的名字。','密录':'姐姐说密录里有一份复国名单。但她又说，名单上的人，都已经不想回来了。','桃花酒':'桃花酒是她母亲做的。她每个月都会酿一壶，对着月亮喝。','先帝遗孤':'她就是先帝遗孤。她活着，就是前朝还有一口气。','真心':'我爱沈墨。但我从来不敢说。因为姐姐也爱他。','default':'姐姐走的那天晚上，我看到她笑了。她说："我终于可以休息了。"'},
-Zhao:{'你是谁':'我是南唐暗卫，也是爱上前朝公主的男人。','密录':'密录我查过。名单上的人，都已经老了。他们不会复国了。','桃花酒':'那壶酒我查过两次。第一次是一年前，第二次是三天前。两次的成分不一样。','先帝遗孤':'她就是先帝遗孤。我三个月前就知道了。','真心':'我每天夜里都在想——如果我不是暗卫，她会不会多看我一眼。','default':'我做了一辈子别人的眼睛，最后看不清自己的心。'},
-Su:{'你是谁':'我是苏婉。我用了十年时间学会弹琴，然后用了一刻钟学会了杀人。','密录':'密录里有一份名单，上面有我的名字。我不想复国，我只想为死在宫里的母亲报仇。','桃花酒':'我在酒里下了迷药，想让她睡一觉，我好拿走密录。但我不知道，她早就把密录给了沈墨。','先帝遗孤':'她就是先帝遗孤。她活着的每一天，都在想该怎么结束这一切。','真心':'我恨她是因为她比我清醒。她早就放下了，而我用了十年都没学会放下。','default':'姐姐走的那天晚上，我听到了她最后一句话："照顾好自己。"'}
+var kb2={
+Shen:{'你是谁':'我是沈逸之。','密录':'密录是一份名单。柳如烟把它交给了我。','桃花酒':'那壶酒是她自己酿的。','真心':'我画她的时候，心里是干净的。','default':'我画了她三年，最后一张画是她的背影。'},
+Xiao:{'你是谁':'我是柳如月。','密录':'姐姐说名单上的人都已经不想回来了。','桃花酒':'桃花酒是她母亲做的。','真心':'我爱沈墨。但我从来不敢说。','default':'姐姐走的那天晚上，她笑了。'},
+Zhao:{'你是谁':'我是南唐暗卫。','密录':'名单上的人都已经老了。','桃花酒':'那壶酒我查过两次，成分不一样。','真心':'如果我不是暗卫，她会不会多看我一眼。','default':'我做了一辈子别人的眼睛。'},
+Su:{'你是谁':'我是苏婉。','密录':'密录里有我的名字。','桃花酒':'我在酒里下了迷药。','真心':'我恨她是因为她比我清醒。','default':'姐姐走的那天晚上，我听到了她最后一句话。'}
 };
-
 function go(n){
     document.getElementById(steps[step]).classList.add('hide');
     step=n;
@@ -331,7 +314,6 @@ function go(n){
     document.getElementById('progress').style.width=pct+'%';
     window.scrollTo({top:0});
 }
-
 function restart(){
     step=0; role=null; votes=[null,null];
     for(var i=0;i<steps.length;i++){document.getElementById(steps[i]).classList.add('hide');}
@@ -340,7 +322,6 @@ function restart(){
     document.getElementById('progress').style.width='0%';
     window.scrollTo({top:0});
 }
-
 function pick(key){
     var map={Shen:['bShen','sShen'],Xiao:['bXiao','sXiao'],Zhao:['bZhao','sZhao'],Su:['bSu','sSu']};
     var b=document.getElementById(map[key][0]);
@@ -360,7 +341,6 @@ function pick(key){
     }
     b.disabled=false;
 }
-
 function resetBtns(){
     var ids=['bShen','bXiao','bZhao','bSu'];
     for(var i=0;i<ids.length;i++){document.getElementById(ids[i]).disabled=false;}
@@ -368,7 +348,6 @@ function resetBtns(){
     for(var k=0;k<keys.length;k++){document.getElementById('s'+keys[k]).classList.add('hide');}
     role=null;
 }
-
 function genShare(){
     var area=document.getElementById('shareArea');
     var html='';
@@ -380,7 +359,6 @@ function genShare(){
     }
     area.innerHTML=html||'<span style="color:#6a5a6a;">无其他角色</span>';
 }
-
 function genChat(){
     var html='';
     var keys=Object.keys(chatData);
@@ -404,7 +382,6 @@ function genChat(){
         }
     }
 }
-
 function genChat2(){
     var html='';
     var keys=Object.keys(chatData);
@@ -428,7 +405,6 @@ function genChat2(){
         }
     }
 }
-
 function ask(){
     var target=document.getElementById('target').value;
     var q=document.getElementById('question').value.trim();
@@ -442,7 +418,6 @@ function ask(){
     }
     box.innerHTML='<strong style="color:#d4a0c8;">'+chatData[target].n+'</strong> 回答：'+ans;
 }
-
 function ask2(){
     var target=document.getElementById('target2').value;
     var q=document.getElementById('question2').value.trim();
@@ -456,10 +431,8 @@ function ask2(){
     }
     box.innerHTML='<strong style="color:#d4a0c8;">'+chatData[target].n+'</strong> 回答：'+ans;
 }
-
 function qk(w){document.getElementById('question').value=w; ask();}
 function qk2(w){document.getElementById('question2').value=w; ask2();}
-
 function vt(p,c){
     if(votes[p-1]!==null)return;
     votes[p-1]=c;
@@ -475,17 +448,14 @@ function vt(p,c){
     if(votes[0]!==null && votes[1]!==null){
         document.getElementById('rb').style.display='block';
         document.getElementById('vtxt').innerHTML='玩家1 投 <span style="color:#d4a0c8;">'+labels[votes[0]]+'</span> ｜ 玩家2 投 <span style="color:#d4a0c8;">'+labels[votes[1]]+'</span>';
-        document.getElementById('vr').style.display='block';
-    }
+        document.getElementById('vr').style.display='block    }
 }
-
 function updateVote(){
     var s=document.getElementById('vs');
     var p1=votes[0]?labels[votes[0]]:'未投';
     var p2=votes[1]?labels[votes[1]]:'未投';
     s.innerHTML='<span class="voter">玩家1</span> '+p1+' | <span class="voter">玩家2</span> '+p2;
 }
-
 function resetVotes(){
     votes=[null,null];
     var all=document.querySelectorAll('#s8 .btn-vote');
@@ -494,14 +464,12 @@ function resetVotes(){
     document.getElementById('vr').style.display='none';
     updateVote();
 }
-
 function showTruth(){
     document.getElementById('s8').classList.add('hide');
     step=9;
     document.getElementById('s9').classList.remove('hide');
     window.scrollTo({top:0});
 }
-
 resetBtns();
 </script>
 </body>
